@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 import os
-from Gaudi.Configuration import INFO, WARNING, DEBUG
+from Gaudi.Configuration import INFO, WARNING, INFO
 
 from Configurables import k4DataSvc, MarlinProcessorWrapper
 from k4MarlinWrapper.inputReader import create_reader, attach_edm4hep2lcio_conversion
@@ -468,7 +468,7 @@ JetClusteringAndRefiner = MarlinProcessorWrapper("JetClusteringAndRefiner")
 JetClusteringAndRefiner.OutputLevel = WARNING
 JetClusteringAndRefiner.ProcessorType = "LcfiplusProcessor"
 JetClusteringAndRefiner.Parameters = {
-                                      "Algorithms": ["JetClustering", "JetVertexRefiner"],
+                                      "Algorithms": ["JetClustering"],
                                       "JetClustering.AlphaParameter": ["1.0"],
                                       "JetClustering.BetaParameter": ["1.0"],
                                       "JetClustering.GammaParameter": ["1.0"],
@@ -1097,7 +1097,7 @@ if CONFIG["OutputMode"] == "LCIO":
                              "DropCollectionNames": [],
                              "DropCollectionTypes": ["MCParticle", "LCRelation", "SimCalorimeterHit", "CalorimeterHit", "SimTrackerHit", "TrackerHit", "TrackerHitPlane", "Track", "ReconstructedParticle", "LCFloatVec"],
                              "FullSubsetCollections": ["EfficientMCParticles", "InefficientMCParticles", "MCPhysicsParticles"],
-                             "KeepCollectionNames": ["MCParticlesSkimmed", "MCPhysicsParticles", "RecoMCTruthLink", "SiTracks", "SiTracks_Refitted", "PandoraClusters", "PandoraPFOs", "SelectedPandoraPFOs", "LooseSelectedPandoraPFOs", "TightSelectedPandoraPFOs", "RefinedVertexJets", "RefinedVertexJets_rel", "RefinedVertexJets_vtx", "RefinedVertexJets_vtx_RP", "BuildUpVertices", "BuildUpVertices_res", "BuildUpVertices_RP", "BuildUpVertices_res_RP", "BuildUpVertices_V0", "BuildUpVertices_V0_res", "BuildUpVertices_V0_RP", "BuildUpVertices_V0_res_RP", "PrimaryVertices", "PrimaryVertices_res", "PrimaryVertices_RP", "PrimaryVertices_res_RP", "RefinedVertices", "RefinedVertices_RP"],
+                             "KeepCollectionNames": ["MCParticlesSkimmed", "MCPhysicsParticles", "RecoMCTruthLink", "SiTracks", "SiTracks_Refitted", "PandoraClusters", "PandoraPFOs", "SelectedPandoraPFOs", "LooseSelectedPandoraPFOs", "TightSelectedPandoraPFOs", "BuildUpVertices", "BuildUpVertices_res", "BuildUpVertices_RP", "BuildUpVertices_res_RP", "BuildUpVertices_V0", "BuildUpVertices_V0_res", "BuildUpVertices_V0_RP", "BuildUpVertices_V0_res_RP", "PrimaryVertices", "PrimaryVertices_res", "PrimaryVertices_RP", "PrimaryVertices_res_RP", "RefinedVertices", "RefinedVertices_RP"],
                              "LCIOOutputFile": [f"{reco_args.outputBasename}_DST.slcio"],
                              "LCIOWriteMode": ["WRITE_NEW"]
                              }
@@ -1111,7 +1111,7 @@ if CONFIG["OutputMode"] == "EDM4Hep":
     lcioConvTool.collNameMapping = {
         "MCParticle": "MCParticles"
     }
-    lcioConvTool.OutputLevel = DEBUG
+    lcioConvTool.OutputLevel = INFO
 # attach to the last non output processor
     EventNumber.Lcio2EDM4hepTool = lcioConvTool
 
