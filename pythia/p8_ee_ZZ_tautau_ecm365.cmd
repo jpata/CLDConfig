@@ -1,5 +1,3 @@
-! From https://github.com/HEP-FCC/FCC-config/blob/winter2023/FCCee/Generator/Pythia8/p8_ee_ZZ_ecm365.cmd
-
 Random:setSeed = on
 Main:numberOfEvents = 1000         ! number of events to generate
 Main:timesAllowErrors = 5          ! how many aborts before run stops
