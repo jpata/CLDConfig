@@ -22,16 +22,14 @@ Beams:sigmaVertexX = 2.73e-2   !  27.3 mum
 Beams:sigmaVertexY = 48.8E-6   !  48.8 nm
 Beams:sigmaVertexZ = 1.33      !  1.33 mm
 
-! 3) Hard process : ZZ at 240 GeV
-Beams:eCM = 240  ! CM energy of collision
-WeakDoubleBoson:ffbar2gmZgmZ = on
-23:onMode    = off
-23:onIfAny   = 15
+! 3) Hard process : Z production at 91GeV
+Beams:eCM = 91  ! CM energy of collision
+WeakSingleBoson:ffbar2ffbar(s:gmZ) = on
 
 ! 4) Settings for the event generation process in the Pythia8 library.
-PartonLevel:ISR = on               ! no initial-state radiation
-PartonLevel:FSR = on               ! no final-state radiation
+PartonLevel:ISR = on               ! initial-state radiation
+PartonLevel:FSR = on               ! final-state radiation
 
-ParticleDecays:limitCylinder = on
-ParticleDecays:xyMax = 2250.
-ParticleDecays:zMax = 2500.
+! 5) Non-standard settings; exemplifies tuning possibilities.
+23:onMode   = off
+23:onIfAny  = 15

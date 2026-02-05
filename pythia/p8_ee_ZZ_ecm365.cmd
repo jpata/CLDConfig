@@ -1,4 +1,5 @@
-! From https://github.com/HEP-FCC/FCC-config/blob/winter2023/FCCee/Generator/Pythia8/p8_ee_ZZ_ecm365.cmd
+! adapted from https://github.com/HEP-FCC/FCC-config/blob/winter2023/FCCee/Generator/Pythia8/p8_ee_ZZ_ecm365.cmd
+! Apache License 2.0, copyright FCC-config authors, modified by Joosep Pata in 2025
 
 Random:setSeed = on
 Main:numberOfEvents = 1000         ! number of events to generate
