@@ -18,9 +18,9 @@ Beams:idB = -11                   ! second beam, e- = -11
 
 ! Vertex smearing :
 Beams:allowVertexSpread = on
-Beams:sigmaVertexX = 2.73e-2   !  27.3 mum
-Beams:sigmaVertexY = 48.8E-6   !  48.8 nm
-Beams:sigmaVertexZ = 1.33      !  1.33 mm
+Beams:sigmaVertexX = 6.36E-3   !  6.36 um
+Beams:sigmaVertexY = 28.3E-6   !  28.3 nm
+Beams:sigmaVertexZ = 0.424     !  0.424 mm
 
 ! 3) Hard process : Z production at 91GeV
 Beams:eCM = 91  ! CM energy of collision
