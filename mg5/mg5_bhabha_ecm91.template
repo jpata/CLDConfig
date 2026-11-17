@@ -2,8 +2,8 @@ import model sm
 generate e+ e- > e+ e-
 output mg5_bhabha_ecm91
 launch mg5_bhabha_ecm91 -n mg5_bhabha_ecm91_seed${NUM}
-set ebeam1 45
-set ebeam2 45
+set ebeam1 45.5
+set ebeam2 45.5
 set etal 2.436
 set ptl 0.0
 set iseed ${NUM}
